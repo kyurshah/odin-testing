@@ -56,7 +56,18 @@ function caesarCipher(sentence, wordShift) {
 }
 
 function analyzeArray(numberArray) {
-  // properties - average, min, max,
+  // properties - average, min, max, and length
+  let sum = 0;
+  for (let i = 0; i < numberArray.length; i++) {
+    sum += numberArray[i];
+  }
+
+  return {
+    "average": sum / numberArray.length ,
+    "min": Math.min(...numberArray),
+    "max": Math.max(...numberArray),
+    "length": numberArray.length,
+  }
 }
 
 module.exports = {

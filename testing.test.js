@@ -3,7 +3,7 @@ const { capitalise } = require("./testing");
 const { reverseString } = require("./testing");
 const { calculator } = require("./testing");
 const { caesarCipher } = require("./testing");
-// const {analyzeArray} = require("./testing");
+const {analyzeArray} = require("./testing");
 
 test("adds 1 + 2 to equal 3.", () => {
   expect(sum(1, 2)).toBe(3);
@@ -40,4 +40,20 @@ test("caesar cipher 'Hello, World!', 3' as 'Khoor, Zruog!'.", () => {
 
 test("caesar cipher 'HeLLo', 3 as 'KhOOr'.", () => {
   expect(caesarCipher("HeLLo", 3)).toMatch("KhOOr");
+});
+
+test("average to be 2.5", () => {
+  expect(analyzeArray([1,2,3]).average).toBe(2);
+});
+
+test("minimum value to be 1", () => {
+  expect(analyzeArray([1,2,3,4]).min).toBe(1);
+});
+
+test("maximum value to be 1", () => {
+  expect(analyzeArray([1,2,3,4]).max).toBe(4);
+});
+
+test("length to be 4", () => {
+  expect(analyzeArray([1,2,3,4]).length).toBe(4);
 });
